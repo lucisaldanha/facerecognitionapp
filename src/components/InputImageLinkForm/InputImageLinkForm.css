@@ -1,0 +1,9 @@
+
+.centerFlex{
+  display: flex;
+  justify-content: center;
+}
+
+p {
+	color:#333333;
+}
