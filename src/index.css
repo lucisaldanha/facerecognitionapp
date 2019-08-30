@@ -1,10 +1,10 @@
 body {
 	margin: 0;
-  	font-family: sans-serif;
+	font-family: 'Oswald', sans-serif;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
   	/*background-image: radial-gradient( circle farthest-corner at 6.6% 12%,  rgba(64,0,126,1) 20.8%, rgba(0,255,160,1) 100.2% );*/
-	background: rgb(97,94,164); /* Fall back background */
+	background: #3c7f67; /* Fall back background */
 	/*background: linear-gradient(174deg, rgba(97,94,164,1) 30%, rgba(9,9,121,1) 100%, rgba(0,212,255,1) 100%); */
 	background: linear-gradient(75deg, rgba(215, 215, 215, 0.06) 0%, rgba(215, 215, 215, 0.06) 50%,rgba(67, 67, 67, 0.06) 50%,rgba(67, 67, 67, 0.06) 100%),
 					linear-gradient(123deg, rgba(236, 236, 236, 0.1) 0%, rgba(236, 236, 236, 0.1) 50%,rgba(116, 116, 116, 0.1) 50%, rgba(116, 116, 116, 0.1) 100%),
@@ -19,7 +19,4 @@ body {
   	background-attachment: fixed; /*  Fixed background color that was repeting  */
 }
 
-code {
-  	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-   monospace;
-}
+
