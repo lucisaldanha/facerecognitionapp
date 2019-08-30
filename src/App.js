@@ -8,15 +8,18 @@ import Particles from 'react-particles-js';
 import './App.css';
 
 const particlesOptions = {
-    particles: {
-        line_linked: {
-            shadow: {
-                enable: true,
-                color: "#3CA9D1",
-                blur: 5
+    "particles": {
+        "number": {
+            "value": 100,
+            "density": {
+                "enable": true,
+                "value_area": 800
             }
+        },
+        "size": {
+            "value": 1
         }
-    }
+    } 
 }
 
 class App extends Component {

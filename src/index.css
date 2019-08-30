@@ -17,6 +17,7 @@ body {
 					linear-gradient(307deg, rgba(200, 200, 200, 0.08) 0%, rgba(200, 200, 200, 0.08) 50%,rgba(117, 117, 117, 0.08) 50%, rgba(117, 117, 117, 0.08) 100%),
 					linear-gradient(90deg, rgb(48, 195, 152),rgb(3, 109, 68));
   	background-attachment: fixed; /*  Fixed background color that was repeting  */
+  	/*background-color: black;*/
 }
 
 
