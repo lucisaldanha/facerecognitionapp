@@ -5,7 +5,7 @@
 }
 
 p {
-	color:#333333;
+	color:#F4F4F4;
 }
 
 .pattern {
@@ -19,9 +19,8 @@ p {
 	width: 700px;
 }
 button {
-	background-color: #71c2ff00;
-	
-	
+	background-color: transparent; /*button color set to transparent */
+		
 }
 
 
