@@ -4,7 +4,7 @@ const Navigation = () => {
 	return (
 		<nav style={{display:'flex', justifyContent:'flex-end'}} >
 			<p 
-				className='f4  ttc dark-gray dim pa3 mv1 link underline-hover pointer'>
+				className='f4  ttc navy dim pa3 mv1 link underline-hover pointer'>
 				Sign out
 			</p>
 		</nav>
