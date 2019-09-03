@@ -17,7 +17,7 @@ const InputImageLinkForm = ( {onInputChange, onButtonClick} ) => {
 						onChange ={onInputChange}
 					/>
 					<button 
-						className='ml1 pointer br2 w-30 grow f4 link ph3 pv2 dib white'
+						className='ml1 pointer br2 w-30 grow f4 link ph3 pv2 dib gold'
 						onClick={onButtonClick}
 					>
 						<span className="db w-100">Detect</span> 
