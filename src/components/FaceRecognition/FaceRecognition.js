@@ -5,8 +5,8 @@ const FaceRecognition = () => {
 		<div className = 'centerFlex' >
 			<div className = 'image' >
 				<img 
-					src = 'https://www.sciencefriday.com/wp-content/uploads/2019/06/D9bhA0iXsAAO-u7.jpg' 
-					alt = 'image link' 
+					src = {'https://www.sagefruit.com/wp-content/uploads/2016/08/Ambrosia-350-x-350-300x300.png'}
+					alt = 'input entered' 
 				/>
 			</div>
 		</div>

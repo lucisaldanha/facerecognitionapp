@@ -32,7 +32,8 @@ class App extends Component {
     constructor(props){
         super();
         this.state = {
-            imageInput: ''
+            imageInput: '',
+
         }
     };
 
@@ -42,8 +43,8 @@ class App extends Component {
     onButtonClickFunction = (event) => {
         console.log('Click!');
         app.models.predict(
-            "a403429f2ddf4b49b307e318f00e528b", 
-            "https://samples.clarifai.com/face-det.jpg")
+            Clarifai.COLOR_MODEL, 
+            "https://www.sagefruit.com/wp-content/uploads/2016/08/Ambrosia-350-x-350-300x300.png")
         .then(
             function(response) {
               // do something with response
