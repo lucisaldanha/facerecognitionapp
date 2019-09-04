@@ -10,3 +10,11 @@
   right:0;
   z-index: -1; /* elements with z-index of -1 will be displayed behind others */
 }
+
+/**** Styling FaceRecognition image to be responsive (width and height)****/
+.image {
+	padding: 40px;
+	width: 80%;
+ 	height: auto;
+
+}
