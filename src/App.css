@@ -1,6 +1,12 @@
 .App {
   text-align: center;
 }
+
+.centerFlex{
+  display: flex;
+  justify-content: center;
+}
+
 /***** Particles component styling *****/
 .particles {
   position: fixed; /* position fixed to the viewport */
@@ -13,8 +19,7 @@
 
 /**** Styling FaceRecognition image to be responsive (width and height)****/
 .image {
-	padding: 40px;
-	width: 80%;
+	padding: 30px;
+	width: 500px;
  	height: auto;
-
 }

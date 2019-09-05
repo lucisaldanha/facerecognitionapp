@@ -33,22 +33,28 @@ class App extends Component {
         super();
         this.state = {
             imageInput: '',
-
+            imageUrl: ''
         }
     };
 
     onChangeInputFunction = (event) => {
-        console.log(event.target.value);
+        // console.log(event.target.value);
+        this.setState({
+            imageInput: event.target.value
+        });
     };
     onButtonClickFunction = (event) => {
-        console.log('Click!');
+        // console.log('Click!');
+        this.setState({
+            imageUrl: this.state.imageInput
+        });
         app.models.predict(
-            Clarifai.COLOR_MODEL, 
-            "https://www.sagefruit.com/wp-content/uploads/2016/08/Ambrosia-350-x-350-300x300.png")
+            Clarifai.FACE_DETECT_MODEL, 
+            this.state.imageInput)
         .then(
             function(response) {
               // do something with response
-              console.log(response);
+              console.log(response.outputs[0].data.regions[0].region_info.bounding_box);
             },
             function(err) {
               // there was an error
@@ -70,7 +76,10 @@ class App extends Component {
                     onInputChange={this.onChangeInputFunction} 
                     onButtonClick={this.onButtonClickFunction} 
                 />
-                <FaceRecognition /> 
+                <FaceRecognition
+                    ImageUrlDisplay = {this.state.imageUrl} /*use imageInput this to display image before 
+                    clicking on Detect button or use imageUrl to display image after click of button*/
+                /> 
            </div>
         );
     }
