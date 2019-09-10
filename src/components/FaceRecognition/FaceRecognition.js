@@ -5,6 +5,7 @@ const FaceRecognition = ( {ImageUrlDisplay} ) => {
 		<div className = 'centerFlex' >
 			<div >
 				<img 
+					id = 'inputimage'
 					src = {ImageUrlDisplay}
 					alt = 'input entered' 
 					className = 'image'
