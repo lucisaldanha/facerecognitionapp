@@ -5,7 +5,7 @@ on top of the image input. Styling was made/copied by Clarifai Face Detection
 
 .bounding-box {
     position: absolute;
-    box-shadow: 0 0 0 3px #149df2 inset;
+    box-shadow: 0 0 0 3px #1cc0ce inset;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
