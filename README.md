@@ -15,11 +15,7 @@ Create a responsive webpage that you are able to:
 
 ### `Where we are at`
 
-Added calculateFaceLocation method, still need to be implemented. Also we call this function inside the onButtonClickFunction method, as a parameter the response we get from API.
-
-Next steps: work in FaceLocation function and maybe implement ES6 into onButtonClickFunction function.
-
-So far: the API is working, we do get a response from API and are able to console.log response. Button and Input work. 
+So far: the API is working, we do get a response from API and are able to console.log response. Button and Input work. Website gives bounding box over the image, on top of the face. API works.
 
 ### `Next steps`
 
