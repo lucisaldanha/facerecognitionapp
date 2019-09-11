@@ -93,8 +93,8 @@ class App extends Component {
                     onButtonClick={this.onButtonClickFunction} 
                 />
                 <FaceRecognition
-                    ImageUrlDisplay = {this.state.imageUrl} /*use imageInput this to display image before 
-                    clicking on Detect button or use imageUrl to display image after click of button*/
+                    box = {this.state.box}
+                    ImageUrlDisplay = {this.state.imageUrl} 
                 /> 
            </div>
         );

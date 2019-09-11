@@ -19,7 +19,7 @@
 
 /**** Styling FaceRecognition image to be responsive (width and height)****/
 .image {
-	padding: 30px;
+	/*padding: 30px;  this padding was affecting sizing of bounding-box*/
 	width: 500px;
  	height: auto;
 }
