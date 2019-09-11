@@ -79,6 +79,9 @@ class App extends Component {
             })
         .catch( err => console.log(err))  // there was an error
     };
+    routeChange = (route) => {
+        this.setState( {route: route} );
+    };
     
     render() {
         return (
@@ -87,9 +90,9 @@ class App extends Component {
                     className='particles'
                     params={particlesOptions}
                 />
-                <Navigation />
-                { this.state.route === 'home'
-                    ? <SignIn />
+                <Navigation routeChange={this.routeChange} />
+                { this.state.route === 'home' ?
+                    <SignIn routeChange={this.routeChange} />
                     : <div>
                         <Logo />
                         <Rank />
