@@ -37,7 +37,7 @@ class App extends Component {
             imageInput: '',
             imageUrl: '',
             box: {},
-            route: 'home'
+            route: 'signin'
         }
     };
 
@@ -92,9 +92,8 @@ class App extends Component {
                     params={particlesOptions}
                 />
                 <Navigation routeChange={this.routeChange} />
-                { this.state.route === 'home' ?
-                    <SignIn routeChange={this.routeChange} />
-                    : <div>
+                { this.state.route === 'home' 
+                ?   <div>
                         <Logo />
                         <Rank />
                         <InputImageLinkForm 
@@ -105,7 +104,13 @@ class App extends Component {
                             box = {this.state.box}
                             ImageUrlDisplay = {this.state.imageUrl} 
                         /> 
-                    </div>
+                    </div> 
+                : 
+                    ( this.state.route === 'signin' ?
+                        <SignIn routeChange={this.routeChange} />
+                    :
+                        <Register routeChange={this.routeChange} />
+                    )
                 }
            </div>
         );
