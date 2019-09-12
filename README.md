@@ -13,13 +13,16 @@ Create a responsive webpage that users can:
 - Check if the input image has a face, which will have a box over it
 - Sign Out
 
-### `Where we are at`
+### `State we are at`
 
-So far: the API is working, we do get a response from API and are able to console.log response. Button and Input work. Website gives bounding box over the image, on top of the face. API works.
+So far: the API is working, able to recognize faces over an image in our website. 
+However, our website gives a bounding box over the image, on top of one face. 
 
 All buttons and links are working properly, directing the user to Sign In, Register, and Home.
 
 ### `Next steps`
+
+We need to work on being able to have multiple bounding boxes over the image faces.
 
 We need to create our Server.
 
