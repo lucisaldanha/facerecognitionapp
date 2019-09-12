@@ -37,7 +37,8 @@ class App extends Component {
             imageInput: '',
             imageUrl: '',
             box: {},
-            route: 'signin'
+            route: 'signin',
+            isSignedIn: false
         }
     };
 
@@ -81,18 +82,26 @@ class App extends Component {
         .catch( err => console.log(err))  // there was an error
     };
     routeChange = (route) => {
+        if ( route === 'signin') {
+            this.setState({isSignedIn: false});
+        } else if (route === 'home') {
+            this.setState({isSignedIn: true});
+        } else {
+            this.setState({isSignedIn: false});
+        }
         this.setState( {route: route} );
     };
     
     render() {
+        const {isSignedIn, route, box, imageUrl} = this.state; //instead of writing everywhere this.state
         return (
             <div className="App">
                 <Particles 
                     className='particles'
                     params={particlesOptions}
                 />
-                <Navigation routeChange={this.routeChange} />
-                { this.state.route === 'home' 
+                <Navigation isSignedIn={isSignedIn}  routeChange={this.routeChange} />
+                { route === 'home' 
                 ?   <div>
                         <Logo />
                         <Rank />
@@ -101,15 +110,15 @@ class App extends Component {
                             onButtonClick={this.onButtonClickFunction} 
                         />
                         <FaceRecognition
-                            box = {this.state.box}
-                            ImageUrlDisplay = {this.state.imageUrl} 
+                            box = {box}
+                            ImageUrlDisplay = {imageUrl} 
                         /> 
                     </div> 
                 : 
-                    ( this.state.route === 'signin' ?
-                        <SignIn routeChange={this.routeChange} />
-                    :
+                    ( route === 'register' ?
                         <Register routeChange={this.routeChange} />
+                    :
+                        <SignIn routeChange={this.routeChange} />                     
                     )
                 }
            </div>
