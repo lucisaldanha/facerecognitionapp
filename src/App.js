@@ -32,7 +32,7 @@ const particlesOptions = {
 
 class App extends Component {
     constructor(props){
-        super();
+        super(props);
         this.state = {
             imageInput: '',
             imageUrl: '',
