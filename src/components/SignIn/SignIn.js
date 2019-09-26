@@ -10,26 +10,42 @@ class SignIn extends Component {
 	};
 
 	onEmailChange = (event) => {
-		
 		this.setState({
 			signInEmail: event.target.value
 		})
-
 	};
 
 	onPasswordChange = (event) => {
-		
-		this.setState({
+ 		this.setState({
 			signInPassword: event.target.value
 		})
 	};
+
+	onSubmitSignIn = (event) => {
+		fetch('http://localhost:3000/signin',{
+			method: 'post',
+			headers: {'Content-Type': 'application/json'},
+			body: JSON.stringify({
+				email: this.state.signInEmail,
+				password: this.state.signInPassword
+			})
+		})
+			.then(response => response.json())
+			.then(data => {
+				if(data==='success') {
+					this.props.routeChange('home');
+				} else {
+					alert('Please Sign In.')
+				}
+			})
+	}
 
 	render() {
 		const { routeChange } = this.props; 
 		return (
 			<article className="br3 ba b--black-10 mv6 w-100 w-50-m w-25-l mw6 center shadow-4">
 				<main className="pa4 black-80">
-				  <form className="measure">
+				  <div className="measure">
 				    <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
 				      <legend className="f2 fw6 ph0 mh0 center">Sign In</legend>
 				      <div className="mt3">
@@ -55,7 +71,7 @@ class SignIn extends Component {
 				    </fieldset>
 				    <div className="">
 				      <input 
-				      	onClick={() => routeChange('home')} 
+				      	onClick={this.onSubmitSignIn} 
 				      	className="br2 black b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" 
 				      	type="submit" 
 				      	value="Sign in" 
@@ -66,7 +82,7 @@ class SignIn extends Component {
 				        Register
 				      </p>
 				    </div>
-				  </form>
+				  </div>
 				</main>
 			</article>
 		);  
