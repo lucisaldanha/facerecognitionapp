@@ -75,7 +75,7 @@ class App extends Component {
     };
 
     faceBox = (box) => {
-        console.log(box);
+        // console.log(box);
         this.setState({box : box} );
     };
 
@@ -85,7 +85,7 @@ class App extends Component {
             imageInput: event.target.value
         });
     };
-    onButtonClickFunction = (event) => {
+    onImageSubmit = (event) => {
         // console.log('Click!');
         this.setState({
             imageUrl: this.state.imageInput
@@ -94,10 +94,17 @@ class App extends Component {
             Clarifai.FACE_DETECT_MODEL, 
             this.state.imageInput)
         .then( response => {
-              // do something with response
-              // console.log(response.outputs[0].data.regions[0].region_info.bounding_box);
-              this.faceBox(this.calculateFaceLocation(response));
-            })
+            if(response){ 
+               fetch('http://localhost:3000/image', {
+                  method: 'put',
+                  headers: {'Content-Type': 'application/json'},
+                  body: JSON.stringify({
+                     id: this.state.user.id
+                  })
+               })
+            }
+            this.faceBox(this.calculateFaceLocation(response));
+        })
         .catch( err => console.log(err))  // there was an error
     };
     routeChange = (route) => {
@@ -123,10 +130,10 @@ class App extends Component {
                 { route === 'home' 
                 ?   <div>
                         <Logo />
-                        <Rank />
+                        <Rank name = {this.state.user.name} entries = {this.state.user.entries} />
                         <InputImageLinkForm 
                             onInputChange={this.onChangeInputFunction} 
-                            onButtonClick={this.onButtonClickFunction} 
+                            onButtonClick={this.onImageSubmit} 
                         />
                         <FaceRecognition
                             box = {box}
@@ -140,7 +147,10 @@ class App extends Component {
                            loadUser={this.loadUser}
                         />
                     :
-                        <SignIn routeChange={this.routeChange} />                     
+                        <SignIn 
+                            routeChange={this.routeChange} 
+                            loadUser={this.loadUser}
+                        />                     
                     )
                 }
            </div>
