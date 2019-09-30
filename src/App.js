@@ -38,8 +38,27 @@ class App extends Component {
             imageUrl: '',
             box: {},
             route: 'signin',
-            isSignedIn: false
+            isSignedIn: false,
+            user: {
+               id: '',
+               name: '',
+               email: '',
+               entries: 0,
+               joined: ''
+            }
         }
+    };
+
+    loadUser = (dataUser) => {
+      this.setState({
+         user: {
+            id: dataUser.id,
+            name: dataUser.name,
+            email: dataUser.email,
+            entries: dataUser.entries,
+            joined: dataUser.joined
+         }
+      })
     };
 
     calculateFaceLocation = (data) => {
@@ -116,7 +135,10 @@ class App extends Component {
                     </div> 
                 : 
                     ( route === 'register' ?
-                        <Register routeChange={this.routeChange} />
+                        <Register 
+                           routeChange={this.routeChange}
+                           loadUser={this.loadUser}
+                        />
                     :
                         <SignIn routeChange={this.routeChange} />                     
                     )
