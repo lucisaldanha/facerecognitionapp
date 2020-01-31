@@ -22,9 +22,11 @@ All buttons and links are working properly, directing the user to Sign In, Regis
 
 ### `Next steps`
 
-We need to work on being able to have multiple bounding boxes over the image faces.
+- Database needs to be created.
 
-We need to create our Server.
+- Server needs to be created.
+
+- Website could recognize more than one face in an image
 
 To be defined later.
 
