@@ -22,9 +22,11 @@ All buttons and links are working properly, directing the user to Sign In, Regis
 
 ### `Next steps`
 
-- Database needs to be created.
+- Link Database with Server.
 
-- Server needs to be created.
+- Make Server and Database work properly so New Users can Register and Log In.
+
+- Make website online.
 
 - Website could recognize more than one face in an image
 
