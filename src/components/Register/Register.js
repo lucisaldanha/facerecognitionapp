@@ -45,7 +45,7 @@ class Register extends React.Component {
 					this.props.loadUser(user);
 					this.props.routeChange('home');
 				} else {
-					alert('Please Sign In.')
+					alert('Unable to register.');
 				}
 			})
 
