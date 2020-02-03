@@ -22,13 +22,13 @@ All buttons and links are working properly, directing the user to Sign In, Regis
 
 ### `Next steps`
 
-- Link Database with Server.
+- Link to Database and Server. 100%
 
-- Make Server and Database work properly so New Users can Register and Log In.
+- Make Server and Database work properly with Front End, with new'users' are able to Register and Log In. Also, Front-End should work in cases of existing email registering. 90%
 
-- Make website online.
+- Set website to be online.
 
-- Website could recognize more than one face in an image
+- Website could recognize more than one face in an image.
 
 To be defined later.
 
