@@ -22,12 +22,12 @@ All buttons and links are working properly, directing the user to Sign In, Regis
 
 ### `Past steps`
 
-- Link to Database and Server. 100%
+- Connect to Database and Server.
 
 
 ### `Next steps`
 
-- Make Server and Database work properly with Front End, with new'users' are able to Register and Log In. Also, Front-End should work in cases of existing email registering. 90%
+- Check if Server and Database work properly with Front End, with new'users' are able to Register and Log In. Also, Front-End should work in cases of existing email registering. 90%
 
 - Set website to be online.
 
