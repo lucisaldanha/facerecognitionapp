@@ -36,7 +36,9 @@ class SignIn extends Component {
 					this.props.loadUser(user);
 					this.props.routeChange('home');
 				} else {
-					alert('User not found.')
+					alert('User not found.');
+					//Added an routeChange if sign in fails.
+					this.props.routeChange('register');
 				}
 			})
 	}
