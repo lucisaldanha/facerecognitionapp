@@ -32,11 +32,11 @@ class SignIn extends Component {
 		})
 			.then(response => response.json())
 			.then(user => {
-				if(user.id) {
+				if(user.id) {// when checking user.id, it does not let new user sign.
 					this.props.loadUser(user);
 					this.props.routeChange('home');
 				} else {
-					alert('Please Sign In.')
+					alert('User not found.')
 				}
 			})
 	}
