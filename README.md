@@ -29,6 +29,8 @@ All buttons and links are working properly, directing the user to Sign In, Regis
 
 - Check if Server and Database work properly with Front End, with new'users' are able to Register and Log In. Also, Front-End should work in cases of existing email registering. 90%
 
+- On Sign In, try to add a react-alert, dark mode to page, creating a new branch.
+
 - Set website to be online.
 
 - Website could recognize more than one face in an image.
