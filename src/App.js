@@ -109,7 +109,7 @@ class App extends Component {
             }
             this.faceBox(this.calculateFaceLocation(response));
         })
-        .catch( err => console.log(err));  // there was an error
+        .catch( err => console.log(err)); 
     };
     routeChange = (route) => {
         if ( route === 'signin') {
