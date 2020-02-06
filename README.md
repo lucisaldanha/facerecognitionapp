@@ -24,14 +24,15 @@ All buttons and links are working properly, directing the user to Sign In, Regis
 
 - Connect to Database and Server.
 
-
-### `Next steps`
+- Fix image default, after uploading a image in the app and signing out, when signin back image still there.
 
 - Check if Server and Database work properly with Front End:
     - Test 1 if: Sign in with new user does not let person sign in. Result: It works.
-    - Test 2 if: Register a new user, check if adding/updating user properties on Database 'users' and 'login' tables. Check if new user can sign in, and check if entrie value updates. Result: All works.
+    - Test 2 if: Register a new user, check if adding/updating user properties on Database 'users' and 'login' tables. Check if new user can sign in with right and wrong password. Check if entries value update. Result: All works.
 
-- Fix image default, after uploading a image in the app and signing out, when signin back image still there.
+### `Next steps`
+
+- Fix issue with missing Logo.
 
 - On Sign In, try to add a react-alert, dark mode to page, creating a new branch.
 
