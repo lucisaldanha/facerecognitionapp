@@ -27,7 +27,11 @@ All buttons and links are working properly, directing the user to Sign In, Regis
 
 ### `Next steps`
 
-- Check if Server and Database work properly with Front End, with new'users' are able to Register and Log In. Also, Front-End should work in cases of existing email registering. 90%
+- Check if Server and Database work properly with Front End:
+    - Test 1 if: Sign in with new user does not let person sign in. Result: It works.
+    - Test 2 if: Register a new user, check if adding/updating user properties on Database 'users' and 'login' tables. Check if new user can sign in, and check if entrie value updates. Result: All works.
+
+- Fix image default, after uploading a image in the app and signing out, when signin back image still there.
 
 - On Sign In, try to add a react-alert, dark mode to page, creating a new branch.
 
