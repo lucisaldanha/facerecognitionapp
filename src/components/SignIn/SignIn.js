@@ -12,13 +12,15 @@ class SignIn extends Component {
 	onEmailChange = (event) => {
 		this.setState({
 			signInEmail: event.target.value
-		})
+		});
+		event.preventDefault();
 	};
 
 	onPasswordChange = (event) => {
  		this.setState({
 			signInPassword: event.target.value
-		})
+		});
+		event.preventDefault();
 	};
 
 	onSubmitSignIn = (event) => {
@@ -33,7 +35,7 @@ class SignIn extends Component {
 		})
 			.then(response => response.json())
 			.then(user => {
-				if(user.id) {// when checking user.id, it does not let new user sign.
+				if(user.id && user.email) {// Checks two conditions, it does not let new user sign.
 					this.props.loadUser(user);
 					this.props.routeChange('home');
 				} else {
