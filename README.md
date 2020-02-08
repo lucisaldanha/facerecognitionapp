@@ -34,7 +34,7 @@ All buttons and links are working properly, directing the user to Sign In, Regis
 
 - Change Logo styling (I changed my mind about the color).
 
-- On Sign In, try to add a react-alert, dark mode to page, creating a new branch.
+- On Sign In, try to add a react-alert, on dark mode, create a new branch.
 
 - Set website to be online.
 
