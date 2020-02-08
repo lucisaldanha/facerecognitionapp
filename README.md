@@ -32,7 +32,7 @@ All buttons and links are working properly, directing the user to Sign In, Regis
 
 ### `Next steps`
 
-- Fix Logo styling (I changed my mind about the color).
+- Change Logo styling (I changed my mind about the color).
 
 - On Sign In, try to add a react-alert, dark mode to page, creating a new branch.
 
