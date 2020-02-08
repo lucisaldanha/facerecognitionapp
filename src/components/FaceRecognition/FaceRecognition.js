@@ -7,7 +7,7 @@ const FaceRecognition = ( {ImageUrlDisplay, box} ) => {
 			<div className='absolute mt3'>{/* very important for css styling */ }
 				<img 
 					id = 'inputimage'
-					defaultValue = '' // Fix image default when sign in.
+					defaultValue = ''
 					src = {ImageUrlDisplay}
 					alt = 'input entered' 
 					className = 'image'
