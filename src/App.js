@@ -30,6 +30,22 @@ const particlesOptions = {
     } 
 }
 
+const initialState = {
+    imageInput: '',
+    imageUrl: '',
+    box: {},
+    route: 'signin',
+    isSignedIn: false,
+    user: {
+        id: '',
+        name: '',
+        email: '',
+        entries: 0,
+        joined: ''
+    }
+
+}
+
 class App extends Component {
     constructor(props){
         super(props);
@@ -112,12 +128,13 @@ class App extends Component {
         .catch( err => console.log(err)); 
     };
     routeChange = (route) => {
-        if ( route === 'signin') {
-            this.setState({isSignedIn: false});
-        } else if (route === 'home') {
-            this.setState({isSignedIn: true});
+        if ( route === 'signin') { 
+    // When user log in, the state will be reset to its initialState, so user will not see what the previous person information, as imageUrl.
+            this.setState(initialState);// App is on Sign In form.
+        } else if (route === 'home') { 
+            this.setState({isSignedIn: true});// User is logged in.
         } else {
-            this.setState({isSignedIn: false});
+            this.setState({isSignedIn: false});// App is on Register form.
         }
         this.setState( {route: route} );
     };

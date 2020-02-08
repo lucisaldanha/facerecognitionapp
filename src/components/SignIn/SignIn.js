@@ -22,6 +22,7 @@ class SignIn extends Component {
 	};
 
 	onSubmitSignIn = (event) => {
+		event.preventDefault();
 		fetch('http://localhost:3000/signin',{
 			method: 'post',
 			headers: {'Content-Type': 'application/json'},
