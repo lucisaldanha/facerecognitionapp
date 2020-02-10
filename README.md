@@ -29,10 +29,9 @@ All buttons and links are working properly, directing the user to Sign In, Regis
 - Check if Server and Database work properly with Front End:
     - Test 1 if: Sign in with new user does not let person sign in. Result: It works.
     - Test 2 if: Register a new user, check if adding/updating user properties on Database 'users' and 'login' tables. Check if new user can sign in with right and wrong password. Check if entries value update. Result: All works.
+    - Clean up code and add more notes into code. 
 
 ### `Next steps`
-
-- Clean up code and add more notes into code. 
 
 - Change Logo styling (I changed my mind about the color).
 
