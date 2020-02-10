@@ -32,6 +32,8 @@ All buttons and links are working properly, directing the user to Sign In, Regis
 
 ### `Next steps`
 
+- Clean up code and add more notes into code. 
+
 - Change Logo styling (I changed my mind about the color).
 
 - On Sign In, try to add a react-alert, on dark mode, create a new branch.
