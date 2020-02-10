@@ -9,14 +9,14 @@ class SignIn extends Component {
 		}
 	};
 
-	onEmailChange = (event) => {
+	onEmailChange = (event) => { //setState capture and save user input as a value. 
 		this.setState({
 			signInEmail: event.target.value
 		});
 		event.preventDefault();
 	};
 
-	onPasswordChange = (event) => {
+	onPasswordChange = (event) => { //setState capture and save user input as a value. 
  		this.setState({
 			signInPassword: event.target.value
 		});
@@ -35,15 +35,15 @@ class SignIn extends Component {
 		})
 			.then(response => response.json())
 			.then(user => {
-				if(user.id && user.email) {// Checks two conditions, it does not let new user sign.
+				if(user.id && user.email) { // Checks two conditions, if user email and id already exists on Database. If not, else statement runs.
 					this.props.loadUser(user);
 					this.props.routeChange('home');
 				} else {
 					alert('User not found.');
-					//Added an routeChange if sign in fails.
-					this.props.routeChange('register');
+					this.props.routeChange('register'); //Added an routeChange if sign in fails.
 				}
 			})
+			.catch(err => console.log(err));
 	}
 
 	render() {
