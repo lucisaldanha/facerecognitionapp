@@ -41,7 +41,8 @@ class Register extends React.Component {
 		})
 			.then(response => response.json())
 			.then(user => {
-				if(user.id) {
+				//Checking user.id is a way of validate my form.
+				if(user.id) { 
 					this.props.loadUser(user);
 					this.props.routeChange('home');
 				} else {
