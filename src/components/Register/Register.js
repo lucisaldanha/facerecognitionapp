@@ -30,7 +30,7 @@ class Register extends React.Component {
 	onSubmitRegister = (event) => {
 		// this.props.routeChange('home');
 		// alert(`Registering: ${this.state.name},with email: ${this.state.email}`);
-		fetch('http://localhost:3000/register',{
+		fetch('https://infinite-falls-28010.herokuapp.com/register',{
 			method: 'post',
 			headers: {'Content-Type': 'application/json'},
 			body: JSON.stringify({

@@ -102,7 +102,7 @@ class App extends Component {
             imageUrl: this.state.imageInput
         });
         // Send a post request to server.
-        fetch('http://localhost:3000/imageurl', {
+        fetch('https://infinite-falls-28010.herokuapp.com/imageurl', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -112,7 +112,7 @@ class App extends Component {
         .then(response => response.json() ) // response from server.
         .then( response => { // with the response we make another request, a put request to the server.
             if(response){ 
-                fetch('http://localhost:3000/image', {
+                fetch('https://infinite-falls-28010.herokuapp.com/image', {
                     method: 'put',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify({
