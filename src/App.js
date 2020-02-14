@@ -8,12 +8,7 @@ import InputImageLinkForm from './components/InputImageLinkForm/InputImageLinkFo
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 
 import Particles from 'react-particles-js'; //Background effect.
-import Clarifai from 'clarifai'; //Face recognition Api.
 import './App.css';
-
-const app = new Clarifai.App({
- apiKey: '5d748bb94be74d378353acf8e66b8939'
-});
 
 const particlesOptions = { 
     "particles": {
@@ -106,26 +101,33 @@ class App extends Component {
         this.setState({
             imageUrl: this.state.imageInput
         });
-        app.models
-            .predict(Clarifai.FACE_DETECT_MODEL,this.state.imageInput)
-            .then( response => {
-                if(response){ 
-                    fetch('http://localhost:3000/image', {
-                        method: 'put',
-                        headers: {'Content-Type': 'application/json'},
-                        body: JSON.stringify({
-                            id: this.state.user.id
-                        })
-                    })
-                    .then(response => response.json())
-                    .then(count => {
-                        this.setState(Object.assign(this.state.user,{entries: count}))
-                    })
-                    .catch(err => console.log(err)) //Good practice to place a catch() after fetching method(improving error handling, if this fetch fails).
-                }
-                this.faceBox(this.calculateFaceLocation(response));
+        // Send a post request to server.
+        fetch('http://localhost:3000/imageurl', {
+            method: 'post',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                imageInput: this.state.imageInput
             })
-            .catch(err => console.log(err)); //Catch statement for errors from the Clarifai api.
+        }) //The fetch request sends the input(imageInput on server) and receives a response(the res.json(data) from server.
+        .then(response => response.json() ) // response from server.
+        .then( response => { // with the response we make another request, a put request to the server.
+            if(response){ 
+                fetch('http://localhost:3000/image', {
+                    method: 'put',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        id: this.state.user.id // It will be sent with body of request, and can be see on Params tab.
+                    })
+                })
+                .then(response => response.json())// response from server, with entries count.
+                .then(count => {
+                    this.setState(Object.assign(this.state.user,{entries: count}))
+                }) //properties in the target object are overwritten by properties in the sources.
+                .catch(err => console.log(err)) //Good practice to place a catch() after fetching method(improving error handling, if this fetch fails).
+            }
+            this.faceBox(this.calculateFaceLocation(response));
+        })
+        .catch(err => console.log(err)); //Catch statement for errors from the Clarifai api.
     };
 
     routeChange = (route) => {
