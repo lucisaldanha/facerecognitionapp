@@ -25,7 +25,7 @@ class SignIn extends Component {
 
 	onSubmitSignIn = (event) => {
 		event.preventDefault();
-		fetch('infinite-falls-28010.herokuapp.com/signin',{
+		fetch('https://infinite-falls-28010.herokuapp.com/signin',{
 			method: 'post',
 			headers: {'Content-Type': 'application/json'},
 			body: JSON.stringify({
