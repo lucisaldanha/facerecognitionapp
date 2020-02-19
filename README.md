@@ -32,11 +32,11 @@ All buttons and links are working properly, directing the user to Sign In, Regis
     - Clean up code and add more notes into code. 
 - Test Heroku Postgres and Heroku Server is connected (Heroku).
 
-### `Next steps`
-
 - Deploying to Heroku.
 
-- Test when deployed if Sign In(ok), Register(ok) and Image recognition(ok) works. Register with existing email (id increments.)
+- Test when deployed if Sign In(ok), Register(ok) and Image recognition(ok) works. Register with existing email (id increments? No. Fixed issue on Server side).
+
+### `Next steps`
 
 - Implement Validation security on Front - End side.
 
