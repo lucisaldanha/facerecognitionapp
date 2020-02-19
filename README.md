@@ -36,7 +36,7 @@ All buttons and links are working properly, directing the user to Sign In, Regis
 
 - Deploying to Heroku.
 
-- Test when deployed if Sign In, Register and Image recognition works.
+- Test when deployed if Sign In(ok), Register(ok) and Image recognition(ok) works. Register with existing email (id increments.)
 
 - Implement Validation security on Front - End side.
 
