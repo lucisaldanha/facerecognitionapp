@@ -43,6 +43,8 @@ Face image recognizes one(1) face over an image. If there is more faces on image
 
 - Add information of Linkedin profile and github profile on web page.
 
+- Add creative images for status 404.
+
 - Add footer on website, implementing a cool model.
 
 - Implement a mechanism of traffic information on web page (idea using MailChimp).
