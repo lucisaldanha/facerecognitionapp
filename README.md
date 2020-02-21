@@ -6,19 +6,22 @@ In construction...
 
 ### `Objective`
 
-Create a responsive webpage that users can: 
+Create a Responsive Webpage that users can: 
 
+- Register 
 - Sign In 
-- Input an image 
-- Check if the input image has a face, which will have a box over it
+- Input an image on a input box
+- Check if the input image has a face using an Machine Learning API, which output will be used to draw a box on top of image's face
+- Record number of image entries a user has
 - Sign Out
 
 ### `State we are at`
 
-So far: the API is working, able to recognize faces over an image in our website. 
-However, our website gives a bounding box over the image, on top of one face. 
+Website is deployed. Database and server are working properly. 
 
 All buttons and links are working properly, directing the user to Sign In, Register, and Home.
+
+Face image recognizes one(1) face over an image. If there is more faces on image, only recognizes one. 
 
 ### `Past steps`
 
@@ -41,6 +44,8 @@ All buttons and links are working properly, directing the user to Sign In, Regis
 - Add information of Linkedin profile and github profile on web page.
 
 - Add footer on website, implementing a cool model.
+
+- Implement a mechanism of traffic information on web page (idea using MailChimp).
 
 - Check security of http POST request, we alread an issue to fix it.
 
