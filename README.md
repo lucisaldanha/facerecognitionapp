@@ -38,13 +38,17 @@ All buttons and links are working properly, directing the user to Sign In, Regis
 
 ### `Next steps`
 
+- Add information of Linkedin profile and github profile on web page.
+
+- Add footer on website, implementing a cool model.
+
+- Check security of http POST request, we alread an issue to fix it.
+
 - Implement Validation security on Front - End side.
 
 - Change Logo styling (I changed my mind about the color).
 
 - On Sign In, try to add a react-alert, on dark mode, create a new branch.
-
-- Set website to be online.
 
 - Website could recognize more than one face in an image.
 
